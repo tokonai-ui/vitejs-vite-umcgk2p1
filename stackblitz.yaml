@@ -1,0 +1,9 @@
+# StackBlitz Configuration File
+
+# 這裡用來設定專案的環境變數 (Secrets)
+# 這樣 API 金鑰就不會暴露在您的程式碼中
+environment:
+  secrets:
+    # Key: 請填入您在程式碼中使用的變數名稱，例如 VITE_GOOGLE_API_KEY
+    # Value: 請填入您的 Google API Key
+    VITE_GOOGLE_API_KEY: "AIzaSyCAnwn_cqkR1niCSzgpmq26stbfNVkrJTs"

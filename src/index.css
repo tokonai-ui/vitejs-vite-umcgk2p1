@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* / * 應用程式自訂樣式 * / */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* / * IE and Edge * / */
+  scrollbar-width: none; /* / * Firefox * / */
+}
+/*
+ * 最終解法：強制 Tailwind 編譯所有按鈕深色 Class
+ * 這是為了修正動態 Class (s.buttonBg) 編譯失敗的問題
+*/
+.tailwind-safelist {
+  display: none;
+  /* 請將所有 getStyle() 中使用的 buttonBg class 寫在這裡 */
+  /* 格式: bg-[顏色]-700, bg-[顏色]-800 */
+
+  /* Rose */
+  @apply bg-rose-700;
+  /* Cyan */
+  @apply bg-cyan-800;
+  /* Slate */
+  @apply bg-slate-700; 
+  /* Indigo */
+  @apply bg-indigo-700; 
+  /* Orange */
+  @apply bg-orange-700; 
+  /* Sky (預設) */
+  @apply bg-sky-700; 
+}
